@@ -1,14 +1,14 @@
+body {
+  background-color: rgb(130, 87, 39);
+}
+
 .logo-container {
   display: flex;
   justify-content: center;
 }
 
-.logo-title {
-
-}
-
 .main {
-  background-image: url('corkboardIMG.jpg');
+  background-image: url('./images/corkboardIMG.jpg');
   border: solid 1px black;
   display: flex;
   flex-direction: row;
@@ -16,8 +16,16 @@
   height: 90%;
 }
 
+.add-task-button-container {
+  background: lightpink;
+  border: solid 1px black;
+  display: flex;
+  justify-content: center;
+  margin: 15px 15px;
+}
+
 .card-container {
-  background: rgb(237, 249, 14);
+  background: lightgoldenrodyellow;
   border: solid 1px black;
   box-shadow: 10px 10px 5px grey;
   display: flex;

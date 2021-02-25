@@ -1,8 +1,14 @@
 import React from 'react';
 
-const TaskCard = ({ id, title, task, removeTask }) => {
+const TaskCard = ({ id, title, task, status, removeTask }) => {
+
+  let style;
+  if (status === 'todo') style = {background: `palegoldenrod`};
+  else if (status === 'wip') style = {background: `lightblue`};
+  else if (status === 'finished') style = {background: `lightgreen`};
+
   return (
-    <div className="card-container">
+    <div className="card-container" style={style}>
       <div className="card-title-container">
         <div className="card-title-content">
           <b>{title}</b>
