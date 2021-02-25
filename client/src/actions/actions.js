@@ -1,10 +1,11 @@
 const ADD_TASK = "ADD_TASK";
 const REMOVE_TASK = "REMOVE_TASK";
 const CHANGE_STATUS = "CHANGE_STATUS";
+const TOGGLE_MODAL = "TOGGLE_MODAL";
 
-let id = 0;
+let id = 102;
 
-export const addTask = (task) => {
+export const addTask = (entry) => {
   return {
     type: ADD_TASK,
     payload: {
@@ -30,3 +31,10 @@ export const changeStatus = (id, status) => {
     status,
   }
 };
+
+export const toggleModal = () => {
+  return {
+    type: TOGGLE_MODAL,
+
+  }
+}

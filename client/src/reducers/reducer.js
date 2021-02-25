@@ -1,6 +1,7 @@
 const ADD_TASK = "ADD_TASK";
 const REMOVE_TASK = "REMOVE_TASK";
 const CHANGE_STATUS = "CHANGE_STATUS";
+const TOGGLE_MODAL = "TOGGLE_MODAL";
 
 const defState = [
   {
@@ -71,7 +72,7 @@ const reducer = (state = defState, action) => {
       return [...state,
         {
           id: action.payload.id,
-          status: action.paylod.status,
+          status: action.payload.status,
           title: action.payload.title,
           task: action.payload.task,
         }

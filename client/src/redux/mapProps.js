@@ -1,4 +1,4 @@
-import { addTask, removeTask, changeStatus } from '../actions/actions.js';
+import { addTask, removeTask, changeStatus, toggleModal } from '../actions/actions.js';
 
 export const mapStateToProps = state => {
   return {

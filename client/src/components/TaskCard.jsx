@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TaskCard = ({ id, title, task, status, removeTask }) => {
+const TaskCard = ({ id, title, task, status, removeTask, changeStatus }) => {
 
   let style;
   if (status === 'todo') style = {background: `palegoldenrod`};

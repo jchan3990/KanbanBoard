@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
 import { mapStateToProps, mapDispatchToProps } from '../redux/mapProps.js';
@@ -14,7 +14,13 @@ const StatusColumn = ({ className, tasks }) => {
     <div className={className}>
       <AddTaskButton column={column} />
       {tasks.map(task => (
-        <ConnectedTaskCard key={task.id} id={task.id} title={task.title} task={task.task} status={task.status} />
+        <ConnectedTaskCard
+          key={task.id}
+          id={task.id}
+          title={task.title}
+          task={task.task}
+          status={task.status}
+        />
       ))}
     </div>
   )
