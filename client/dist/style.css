@@ -1,0 +1,71 @@
+.main {
+  border: solid 1px black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 80%;
+}
+
+.card-container {
+  border: dotted 1px black;
+  box-shadow: 10px 10px 5px grey;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 15px;
+  max-height: 200px;
+  min-height: 200px;
+}
+
+.card-task-container {
+  margin: 20px 5px 10px 5px;
+  min-height: 100px;
+}
+
+.card-title-container {
+  font-size: 24px;
+  margin: 5px 5px 5px 5px;
+}
+
+.card-button-container {
+  align-self: flex-end;
+  margin: 5px;
+}
+
+.card-delete-button {
+  background-color: red;
+  color: white;
+  max-width: 100%;
+}
+
+.card-edit-button {
+  background-color: yellowgreen;
+  color: black;
+  max-width: 90px;
+}
+
+.todo-column {
+  align-content: space-around;
+  border: solid 1px red;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  width: 31%;
+}
+
+.wip-column {
+  align-content: space-around;
+  border: solid 1px blue;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  width: 31%;
+}
+
+.finished-column {
+  align-content: space-around;
+  border: solid 1px green;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  width: 31%;
+}

@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { connect } from 'react-redux';
 
-const App = () => {
+import StatusColumn from './StatusColumn.jsx';
 
+const App = ({ todo, wip, finished }) => {
   return (
-    <div>
+    <div className="main">
+      <StatusColumn className="todo-column" tasks={todo} />
+      <StatusColumn className="wip-column" tasks={wip} />
+      <StatusColumn className="finished-column" tasks={finished} />
     </div>
   )
 };
