@@ -39,6 +39,8 @@ const TaskModal = ({ id, status, title, task, column, setToggleModal, addTask, e
   exist === undefined ? handleSave = saveTask : handleSave = handleEditTask;
 
   return (
+    <>
+    <div className="modal-background"></div>
     <div className="modal-container">
       <form>
         <div className="modal-title-container">
@@ -77,6 +79,7 @@ const TaskModal = ({ id, status, title, task, column, setToggleModal, addTask, e
         </div>
       </form>
     </div>
+    </>
   )
 };
 
