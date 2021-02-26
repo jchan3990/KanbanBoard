@@ -1,4 +1,4 @@
-import { addTask, removeTask, changeStatus, toggleModal } from '../actions/actions.js';
+import { addTask, removeTask, changeStatus, editTask } from '../actions/actions.js';
 
 export const mapStateToProps = state => {
   return {
@@ -10,8 +10,9 @@ export const mapStateToProps = state => {
 
 export const mapDispatchToProps = dispatch => {
   return {
-    addTask: task => {dispatch(addTask(task))},
+    addTask: entry => {dispatch(addTask(entry))},
     removeTask: id => {dispatch(removeTask(id))},
     changeStatus: (id, status) => {dispatch(changeStatus(id, status))},
+    editTask: (id, entry) => {dispatch(editTask(id, entry))},
   };
 };

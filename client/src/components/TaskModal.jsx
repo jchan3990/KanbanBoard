@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
-const NewTaskModal = ({ column, setToggleModal, addTask }) => {
-  const [title, setTitle] = useState('');
-  const [task, setTask] = useState('');
+const TaskModal = ({ id, status, title, task, column, setToggleModal, addTask, editTask, exist }) => {
+  const [currTitle, setTitle] = useState(title !== undefined ? title : '');
+  const [currTask, setTask] = useState(task !== undefined ? task : '');
+  const [currStatus, setStatus] = useState(status !== undefined ? status : column);
 
   const cancelCreate = e => {
     e.preventDefault();
@@ -14,16 +15,28 @@ const NewTaskModal = ({ column, setToggleModal, addTask }) => {
     addTask(
       {
         status: column,
-        title: title,
-        task: task,
+        title: currTitle,
+        task: currTask,
       }
     )
 
-    setTitle('');
-    setTask('');
+    setToggleModal(false);
+  }
+
+  const handleEditTask = e => {
+    e.preventDefault();
+    editTask(id,
+      {
+        title: currTitle,
+        task: currTask,
+      }
+    )
 
     setToggleModal(false);
   }
+
+  let handleSave;
+  exist === undefined ? handleSave = saveTask : handleSave = handleEditTask;
 
   return (
     <div className="modal-container">
@@ -33,12 +46,12 @@ const NewTaskModal = ({ column, setToggleModal, addTask }) => {
             <br/>
             <input
               type="text"
-              name="title"
+              name="currTitle"
               minLength="1"
               maxLength="50"
               size="50"
               placeholder="Max 50 characters"
-              value={title}
+              value={currTitle}
               onChange={e => setTitle(e.target.value)}
               required
             />
@@ -49,10 +62,10 @@ const NewTaskModal = ({ column, setToggleModal, addTask }) => {
           <label>Task:
             <br/>
             <textarea
-              name="task"
+              name="currTask"
               rows="5"
               cols="43"
-              value={task}
+              value={currTask}
               onChange={e => setTask(e.target.value)}
             >
             </textarea>
@@ -60,11 +73,11 @@ const NewTaskModal = ({ column, setToggleModal, addTask }) => {
         </div>
         <div className="modal-buttons-container">
           <button onClick={cancelCreate}>Cancel</button>
-          <button onClick={saveTask}>Save</button>
+          <button onClick={handleSave}>Save</button>
         </div>
       </form>
     </div>
   )
 };
 
-export default NewTaskModal;
+export default TaskModal;

@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
 import { mapStateToProps, mapDispatchToProps } from '../redux/mapProps.js';
-import NewTaskModal from './NewTaskModal.jsx';
+import TaskModal from './TaskModal.jsx';
 
-const ConnectedNewTaskModal = connect(mapStateToProps, mapDispatchToProps)(NewTaskModal);
+const ConnectedTaskModal = connect(mapStateToProps, mapDispatchToProps)(TaskModal);
 
 const AddTaskButton = ({ column }) => {
   const [toggleModal, setToggleModal] = useState(false);
@@ -17,7 +17,7 @@ const AddTaskButton = ({ column }) => {
       </div>
     </div>
       {toggleModal &&
-        <ConnectedNewTaskModal column={column} setToggleModal={setToggleModal} />
+        <ConnectedTaskModal column={column} setToggleModal={setToggleModal} />
       }
     </>
   )
