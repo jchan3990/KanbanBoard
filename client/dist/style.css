@@ -43,12 +43,8 @@ body {
   flex-direction: column;
   margin: 15px 15px;
   height: 200px;
+  position: relative;
   width: 350px;
-}
-
-.card-task-container {
-  margin: 20px 5px 10px 5px;
-  min-height: 100px;
 }
 
 .card-title-container {
@@ -56,9 +52,16 @@ body {
   margin: 5px 5px 5px 5px;
 }
 
+.card-task-container {
+  margin: 20px 5px 10px 5px;
+  min-height: 100px;
+}
+
 .card-button-container {
   align-self: flex-end;
   margin: 5px;
+  position: absolute;
+  top: 170px;
 }
 
 .card-delete-button {
