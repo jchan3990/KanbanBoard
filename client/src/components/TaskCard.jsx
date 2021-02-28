@@ -14,9 +14,22 @@ const TaskCard = ({ id, status, title, task, removeTask }) => {
   else if (status === 'wip') style = {background: `lightblue`};
   else if (status === 'finished') style = {background: `lightgreen`};
 
+  const dragStart = e => {
+    e.persist();
+    e.dataTransfer.setData('task_id', e.target.id);
+
+    // setTimeout(() => {
+    //   e.target.style.display = "none";
+    // }, 0);
+  }
+
+  const dragOver = e => {
+    e.stopPropagation();
+  }
+
   return (
     <>
-      <div className="card-container" style={style}>
+      <div className="card-container" style={style} id={id} onDragStart={dragStart} onDragOver={dragOver} draggable="true">
         <div className="card-title-container">
           <div className="card-title-content">
             <b>{title}</b>

@@ -117,21 +117,7 @@ body {
   margin: 5px;
 }
 
-.todo-column {
-  display: flex;
-  flex-direction: column;
-  overflow: scroll;
-  width: 31%;
-}
-
-.wip-column {
-  display: flex;
-  flex-direction: column;
-  overflow: scroll;
-  width: 31%;
-}
-
-.finished-column {
+.status-column {
   display: flex;
   flex-direction: column;
   overflow: scroll;

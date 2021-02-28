@@ -6,9 +6,9 @@ import StatusColumn from './StatusColumn.jsx';
 const App = ({ todo, wip, finished }) => {
   return (
     <div className="main">
-      <StatusColumn className="todo-column" tasks={todo} />
-      <StatusColumn className="wip-column" tasks={wip} />
-      <StatusColumn className="finished-column" tasks={finished} />
+      <StatusColumn id="todo" className="status-column" tasks={todo} />
+      <StatusColumn id="wip" className="status-column" tasks={wip} />
+      <StatusColumn id="finished" className="status-column" tasks={finished} />
     </div>
   )
 };
