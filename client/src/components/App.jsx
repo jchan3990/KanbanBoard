@@ -8,7 +8,6 @@ const App = ({ todo, wip, finished, moveTask }) => {
 
   const dragOver = e => {
     e.preventDefault();
-    e.stopPropagation();
     if (e.target.className === "todo" || e.target.className === "wip" || e.target.className === "finished") status = e.target.className;
   }
 

@@ -39,7 +39,7 @@ const TaskModal = ({ id, status, title, task, column, setToggleModal, addTask, e
 
   return (
     <>
-    <div className="modal-background"></div>
+    <div className="modal-background" onClick={() => setToggleModal(false)}></div>
     <div className="modal-container">
       <form>
         <div className="modal-title-container">
