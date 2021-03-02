@@ -1,8 +1,7 @@
 const ADD_TASK = "ADD_TASK";
 const REMOVE_TASK = "REMOVE_TASK";
-const CHANGE_STATUS = "CHANGE_STATUS";
+const MOVE_TASK = "MOVE_TASK";
 const EDIT_TASK = "EDIT_TASK";
-const DRAG_TASK = "DRAG_TASK";
 
 let id = 102;
 
@@ -26,9 +25,9 @@ export const removeTask = (id) => {
   }
 };
 
-export const changeStatus = (id, status) => {
+export const moveTask = (id, status) => {
   return {
-    type: CHANGE_STATUS,
+    type: MOVE_TASK,
     id,
     status,
   }
@@ -41,16 +40,6 @@ export const editTask = (id, entry) => {
     payload: {
       title: entry.title,
       task: entry.task,
-    }
-  }
-};
-
-export const dragTask = (id, status) => {
-  return {
-    type: DRAG_TASK,
-    id,
-    payload: {
-      status: status,
     }
   }
 };

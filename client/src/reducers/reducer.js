@@ -1,8 +1,7 @@
 const ADD_TASK = "ADD_TASK";
 const REMOVE_TASK = "REMOVE_TASK";
-const CHANGE_STATUS = "CHANGE_STATUS";
+const MOVE_TASK = "MOVE_TASK";
 const EDIT_TASK = "EDIT_TASK";
-const DRAG_TASK = "DRAG_TASK";
 
 const defState = [
   {
@@ -82,14 +81,13 @@ const reducer = (state = defState, action) => {
     case REMOVE_TASK:
       return state.filter(task => task.id !== action.id);
 
-    case CHANGE_STATUS:
+    case MOVE_TASK:
+      console.log(state);
+      console.log(action.id, action.status)
       return state.map(task => task.id === action.id ? {...task, status: action.status} : task);
 
     case EDIT_TASK:
       return state.map(task => task.id === action.id ? {...task, title: action.payload.title, task: action.payload.task} : task);
-
-    case DRAG_TASK:
-      return state.map(tasl => task.id === action.id ? {...task, status: action.payload.status} : task);
 
     default:
       return state;
