@@ -5,6 +5,7 @@ body {
 #app {
   margin: 0 auto;
   width: 1300px;
+  height: 1010px;
   position: relative;
 }
 
@@ -20,7 +21,6 @@ body {
   flex-direction: row;
   height: 1010px;
   justify-content: center;
-  overflow: scroll;
   position: relative;
 }
 
@@ -43,6 +43,8 @@ body {
   flex-direction: column;
   margin: 15px 15px;
   height: 200px;
+  min-height: 200px;
+  max-height: 200px;
   position: relative;
   width: 350px;
 }
@@ -118,6 +120,27 @@ body {
 }
 
 .status-column {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  width: 31%;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  width: 31%;
+}
+
+.wip {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  width: 31%;
+}
+
+.finished {
   display: flex;
   flex-direction: column;
   overflow: scroll;

@@ -19,7 +19,6 @@ const TaskModal = ({ id, status, title, task, column, setToggleModal, addTask, e
         task: currTask,
       }
     )
-
     setToggleModal(false);
   }
 

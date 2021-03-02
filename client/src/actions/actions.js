@@ -6,6 +6,7 @@ const EDIT_TASK = "EDIT_TASK";
 let id = 102;
 
 export const addTask = (entry) => {
+  console.log(entry);
   return {
     type: ADD_TASK,
     payload: {

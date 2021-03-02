@@ -23,13 +23,13 @@ const TaskCard = ({ id, status, title, task, removeTask }) => {
     // }, 0);
   }
 
-  const dragOver = e => {
-    e.stopPropagation();
-  }
+  // const dragOver = e => {
+  //   e.stopPropagation();
+  // }
 
   return (
     <>
-      <div className="card-container" style={style} id={id} onDragStart={dragStart} onDragOver={dragOver} draggable="true">
+      <div className="card-container" style={style} id={id} onDragStart={dragStart} draggable="true">
         <div className="card-title-container">
           <div className="card-title-content">
             <b>{title}</b>
