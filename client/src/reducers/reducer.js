@@ -82,8 +82,6 @@ const reducer = (state = defState, action) => {
       return state.filter(task => task.id !== action.id);
 
     case MOVE_TASK:
-      console.log(state);
-      console.log(action.id, action.status)
       return state.map(task => task.id === action.id ? {...task, status: action.status} : task);
 
     case EDIT_TASK:

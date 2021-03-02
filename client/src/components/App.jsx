@@ -12,9 +12,9 @@ const App = ({ todo, wip, finished, moveTask }) => {
     if (e.target.className === "todo" || e.target.className === "wip" || e.target.className === "finished") status = e.target.className;
   }
 
-  const drop = (e, newStatus) => {
+  const drop = (e, status) => {
     let id = e.dataTransfer.getData("task_id");
-    moveTask(id, newStatus);
+    moveTask(parseInt(id), status);
   }
 
   return (
