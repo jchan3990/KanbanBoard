@@ -1,4 +1,4 @@
-import { addTask, removeTask, changeStatus, editTask } from '../actions/actions.js';
+import { addTask, removeTask, changeStatus, editTask, dragTask } from '../actions/actions.js';
 
 export const mapStateToProps = state => {
   return {
@@ -14,5 +14,6 @@ export const mapDispatchToProps = dispatch => {
     removeTask: id => {dispatch(removeTask(id))},
     changeStatus: (id, status) => {dispatch(changeStatus(id, status))},
     editTask: (id, entry) => {dispatch(editTask(id, entry))},
+    dragTask: (id, status) => {dispatch(dragTask(id, status))},
   };
 };

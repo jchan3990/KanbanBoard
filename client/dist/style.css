@@ -146,3 +146,8 @@ body {
   overflow: scroll;
   width: 31%;
 }
+
+.column-name-container {
+  align-self: center;
+  font-family: Arial, Helvetica, sans-serif;
+}

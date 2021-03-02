@@ -2,6 +2,7 @@ const ADD_TASK = "ADD_TASK";
 const REMOVE_TASK = "REMOVE_TASK";
 const CHANGE_STATUS = "CHANGE_STATUS";
 const EDIT_TASK = "EDIT_TASK";
+const DRAG_TASK = "DRAG_TASK";
 
 const defState = [
   {
@@ -86,6 +87,9 @@ const reducer = (state = defState, action) => {
 
     case EDIT_TASK:
       return state.map(task => task.id === action.id ? {...task, title: action.payload.title, task: action.payload.task} : task);
+
+    case DRAG_TASK:
+      return state.map(tasl => task.id === action.id ? {...task, status: action.payload.status} : task);
 
     default:
       return state;

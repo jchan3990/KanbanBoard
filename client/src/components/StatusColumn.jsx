@@ -8,10 +8,29 @@ import AddTaskButton from './AddTaskButton.jsx';
 const ConnectedTaskCard = connect(mapStateToProps, mapDispatchToProps)(TaskCard);
 
 const StatusColumn = ({ id, tasks }) => {
-  let column = id;
+//   let column = id;
+
+//   const dragOver = e => {
+//     e.preventDefault();
+//     console.log(e.target.className);
+//   }
+
+//   const drop = (e, status) => {
+//     let id = e.dataTransfer.getData("id");
+
+//     let taskList = tasks.filter((task) => {
+//       if (task.id === id) task.status = cat;
+//       return task;
+//     });
+
+//     console.log(taskList);
+//   }
 
   return (
     <div className={id}>
+      <div className="column-name-container">
+        <h1 className="column-name">{id.toUpperCase()}</h1>
+      </div>
       <AddTaskButton column={id} />
       {tasks.map(task => (
         <ConnectedTaskCard
