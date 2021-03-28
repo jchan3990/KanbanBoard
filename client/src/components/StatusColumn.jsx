@@ -8,13 +8,14 @@ import AddTaskButton from './AddTaskButton.jsx';
 const ConnectedTaskCard = connect(mapStateToProps, mapDispatchToProps)(TaskCard);
 
 const StatusColumn = ({ id, tasks }) => {
+  const classname = `${id}-column-container`;
   return (
     <div className={id}>
       <div className="column-name-container">
         <h1 className="column-name">{id.toUpperCase()}</h1>
       </div>
       <AddTaskButton column={id} />
-      <div className="column-container">
+      <div className={classname}>
       {tasks.map(task => (
         <ConnectedTaskCard
           key={task.id}

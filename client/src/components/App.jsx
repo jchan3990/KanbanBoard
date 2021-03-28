@@ -8,11 +8,13 @@ const App = ({ todo, wip, finished, moveTask }) => {
 
   const dragOver = e => {
     e.preventDefault();
-    if (e.target.className === "todo" || e.target.className === "wip" || e.target.className === "finished") status = e.target.className;
+    if (e.target.className === "todo-column-container" || e.target.className === "wip-column-container" || e.target.className === "finished-column-container") status = e.target.className;
   }
 
   const drop = (e, status) => {
     let id = e.dataTransfer.getData("task_id");
+    status = status.split('-')[0];
+    console.log(status)
     moveTask(parseInt(id), status);
   }
 

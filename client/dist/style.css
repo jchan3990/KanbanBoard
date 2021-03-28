@@ -41,7 +41,7 @@ body {
   box-shadow: 10px 10px 5px grey;
   display: flex;
   flex-direction: column;
-  margin: 15px 15px;
+  margin: 0px 15px 15px 15px;
   height: 200px;
   min-height: 200px;
   max-height: 200px;
@@ -135,14 +135,12 @@ body {
 .wip {
   display: flex;
   flex-direction: column;
-
   width: 31%;
 }
 
 .finished {
   display: flex;
   flex-direction: column;
-
   width: 31%;
 }
 
@@ -151,13 +149,35 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.column-container {
+.todo-column-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: scroll;
 }
 
-.column-container::-webkit-scrollbar {
+.todo-column-container::-webkit-scrollbar {
+  display: none;
+}
+
+.wip-column-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+}
+
+.wip-column-container::-webkit-scrollbar {
+  display: none;
+}
+
+.finished-column-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+}
+
+.finished-column-container::-webkit-scrollbar {
   display: none;
 }
