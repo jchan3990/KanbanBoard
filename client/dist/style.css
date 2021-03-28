@@ -129,25 +129,35 @@ body {
 .todo {
   display: flex;
   flex-direction: column;
-  overflow: scroll;
   width: 31%;
 }
 
 .wip {
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+
   width: 31%;
 }
 
 .finished {
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+
   width: 31%;
 }
 
 .column-name-container {
   align-self: center;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.column-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+}
+
+.column-container::-webkit-scrollbar {
+  display: none;
 }

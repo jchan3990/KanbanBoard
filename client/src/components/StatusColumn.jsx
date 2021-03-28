@@ -14,6 +14,7 @@ const StatusColumn = ({ id, tasks }) => {
         <h1 className="column-name">{id.toUpperCase()}</h1>
       </div>
       <AddTaskButton column={id} />
+      <div className="column-container">
       {tasks.map(task => (
         <ConnectedTaskCard
           key={task.id}
@@ -23,6 +24,7 @@ const StatusColumn = ({ id, tasks }) => {
           status={task.status}
         />
       ))}
+      </div>
     </div>
   )
 };

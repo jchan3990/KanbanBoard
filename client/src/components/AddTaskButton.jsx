@@ -13,7 +13,7 @@ const AddTaskButton = ({ column }) => {
     <>
     <div className="add-task-button-container" onClick={() => setToggleModal(true)}>
       <div className="add-task-button-image-container">
-        <img className="add-task-button" src="../dist/images/add-50.png" />
+        <img className="add-task-button" src="./images/add-50.png" />
       </div>
     </div>
       {toggleModal &&
