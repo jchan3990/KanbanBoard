@@ -21,7 +21,7 @@ const TaskCard = ({ id, status, title, task, removeTask }) => {
 
   return (
     <>
-      <div className="card-container" style={style} id={id} onDragStart={(e) => dragStart(e, id)} draggable="true">
+      <div className="card-container" style={style} id={id} status={status} onDragStart={(e) => dragStart(e, id)} draggable="true">
         <div className="card-title-container">
           <div className="card-title-content">
             <b>{title}</b>
