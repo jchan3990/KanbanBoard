@@ -8,7 +8,7 @@ const App = ({ allTasks, todo, wip, finished, moveTask }) => {
 
   const dragOver = e => {
     e.preventDefault();
-    if (e.target.className === "todo-column-container" || e.target.className === "wip-column-container" || e.target.className === "finished-column-container") status = e.target.className;
+    if (e.target.className === "todo-column-container" || e.target.className === "wip-column-container" || e.target.className === "finished-column-container") status = e.target.className, console.log(e.target);
   }
 
   const drop = (e, status) => {
