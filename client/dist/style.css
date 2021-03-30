@@ -150,10 +150,11 @@ body {
 }
 
 .todo-column-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   overflow: scroll;
+  min-height: 850px;
 }
 
 .todo-column-container::-webkit-scrollbar {
@@ -161,10 +162,11 @@ body {
 }
 
 .wip-column-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   overflow: scroll;
+  min-height: 850px;
 }
 
 .wip-column-container::-webkit-scrollbar {
@@ -172,10 +174,11 @@ body {
 }
 
 .finished-column-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   overflow: scroll;
+  min-height: 850px;
 }
 
 .finished-column-container::-webkit-scrollbar {
