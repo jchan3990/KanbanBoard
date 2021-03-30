@@ -14,6 +14,7 @@ const App = ({ allTasks, todo, wip, finished, moveTask }) => {
   const drop = (e, status) => {
     let id = e.dataTransfer.getData("task_id");
     status = status.split('-')[0];
+    console.log(status)
     moveTask(parseInt(id), status);
   }
 

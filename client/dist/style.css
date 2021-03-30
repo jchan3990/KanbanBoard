@@ -154,7 +154,6 @@ body {
   flex-direction: column;
   align-items: center;
   overflow: scroll;
-  min-height: 850px;
 }
 
 .todo-column-container::-webkit-scrollbar {
@@ -166,7 +165,6 @@ body {
   flex-direction: column;
   align-items: center;
   overflow: scroll;
-  min-height: 850px;
 }
 
 .wip-column-container::-webkit-scrollbar {
@@ -178,7 +176,6 @@ body {
   flex-direction: column;
   align-items: center;
   overflow: scroll;
-  min-height: 850px;
 }
 
 .finished-column-container::-webkit-scrollbar {
