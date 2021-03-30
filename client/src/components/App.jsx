@@ -3,12 +3,15 @@ import { connect } from 'react-redux';
 
 import StatusColumn from './StatusColumn.jsx';
 
-const App = ({ allTasks, todo, wip, finished, moveTask }) => {
+const App = ({ todo, wip, finished, moveTask }) => {
   let status = '';
 
   const dragOver = e => {
     e.preventDefault();
     if (e.target.className === "todo-column-container" || e.target.className === "wip-column-container" || e.target.className === "finished-column-container") status = e.target.className;
+    if (e.target.className === "card-container") {
+      console.log(e.target.getBoundingClientRect());
+    }
   }
 
   const drop = (e, status) => {
