@@ -9,9 +9,6 @@ const App = ({ todo, wip, finished, moveTask }) => {
   const dragOver = e => {
     e.preventDefault();
     if (e.target.className === "todo-column-container" || e.target.className === "wip-column-container" || e.target.className === "finished-column-container") status = e.target.className;
-    if (e.target.className === "card-container") {
-      console.log(e.target.getBoundingClientRect());
-    }
   }
 
   const drop = (e, status) => {

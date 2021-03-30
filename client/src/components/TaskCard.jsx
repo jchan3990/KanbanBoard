@@ -17,7 +17,6 @@ const TaskCard = ({ id, status, title, task, removeTask }) => {
   const dragStart = (e, id) => {
     e.persist();
     e.dataTransfer.setData('task_id', e.target.id);
-    console.log(e.target.getBoundingClientRect())
   }
 
   return (
