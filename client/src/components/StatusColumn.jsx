@@ -18,7 +18,7 @@ const StatusColumn = ({ id, tasks }) => {
       <div className={classname}>
       {tasks.map(task => (
         <ConnectedTaskCard
-          key={task.id}
+          key={task.title}
           id={task.id}
           title={task.title}
           task={task.task}
